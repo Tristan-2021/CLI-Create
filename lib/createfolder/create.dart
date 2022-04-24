@@ -34,7 +34,7 @@ void createArchivos(){
      if (isDirectory("$pwd/lib/clean/")) {
       //create Presentation/
       String nombre = ask('Ponga el nombre que desea usar');
-     // Strning namreminuscua = nombre.toLowerCase();
+   //  Strning namreminuscua = nombre.toLowerCase();
 
       //create Data/
      
