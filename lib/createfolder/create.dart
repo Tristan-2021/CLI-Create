@@ -34,6 +34,7 @@ void createArchivos(){
      if (isDirectory("$pwd/lib/clean/")) {
       //create Presentation/
       String nombre = ask('Ponga el nombre que desea usar');
+     // Strning namreminuscua = nombre.toLowerCase();
 
       //create Data/
      
@@ -53,7 +54,7 @@ void createArchivos(){
 
     }
      else {
-       print('  --------*-Debe tener el ditectorio Clean *--------  ');
+       print('  --------*-Debe tener la arquitectura implemendatada *--------  ');
 
      }
 }
