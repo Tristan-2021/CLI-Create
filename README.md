@@ -4,6 +4,6 @@ principios del Tio Bob de arquitectura limpia
 
 # Instalación 
 Primeramente debemos clonar el proyecto e instalarlo globalmente usando la siguiente linea de comando 
->dart pub global actiate --source path create
+>dart pub global activate --source path create
 
 
