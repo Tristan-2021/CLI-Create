@@ -1,6 +1,5 @@
 import 'package:dcli/dcli.dart';
 
-
 void createFolders() {
   if (!isDirectory("$pwd/lib/clean/")) {
     createDir("$pwd/lib/clean/", recursive: true);
@@ -29,32 +28,30 @@ void createFolders() {
   }
 }
 
+void createArchivos() {
+  if (isDirectory("$pwd/lib/clean/")) {
+    //create Presentation/
+    String nombre = ask('Ponga el nombre que desea usar').toLowerCase();
+    //  Strning namreminuscua = nombre.toLowerCase();
 
-void createArchivos(){
-     if (isDirectory("$pwd/lib/clean/")) {
-      //create Presentation/
-      String nombre = ask('Ponga el nombre que desea usar');
-   //  Strning namreminuscua = nombre.toLowerCase();
+    //create Data/
 
-      //create Data/
-     
-      touch("$pwd/lib/clean/data/sources/sources_$nombre.dart", create: true);
-      touch("$pwd/lib/clean/data/model/model_$nombre.dart", create: true);
+    touch("$pwd/lib/clean/data/sources/sources_$nombre.dart", create: true);
+    touch("$pwd/lib/clean/data/model/model_$nombre.dart", create: true);
 
-      touch("$pwd/lib/clean/data/repositories/data_repo_$nombre.dart", create: true);
+    touch("$pwd/lib/clean/data/repositories/data_repo_$nombre.dart",
+        create: true);
 
-      //create Domain/
+    //create Domain/
 
-      touch("$pwd/lib/clean/domain/entity/$nombre.dart", create: true);
-      
-      touch("$pwd/lib/clean/domain/repositories/dom_repo_$nombre.dart", create: true);
-      touch("$pwd/lib/clean/domain/usecase/use_case$nombre.dart", create: true);
+    touch("$pwd/lib/clean/domain/entity/$nombre.dart", create: true);
 
-      print('  --------*-Se ha creado los archivos     ');
+    touch("$pwd/lib/clean/domain/repositories/dom_repo_$nombre.dart",
+        create: true);
+    touch("$pwd/lib/clean/domain/usecase/use_case$nombre.dart", create: true);
 
-    }
-     else {
-       print('  --------*-Debe tener la arquitectura implemendatada *--------  ');
-
-     }
+    print('  --------*-Se ha creado los archivos     ');
+  } else {
+    print('  --------*-Debe tener la arquitectura implemendatada *--------  ');
+  }
 }
